@@ -10,11 +10,12 @@ read -t 1
 
 ## CentOS 7
 ```shell
+cd /root/
+curl -O "https://raw.githubusercontent.com/vladimirmashkov/linux_forwarding/dev/centos7/vladimir_key.pub"
 mkdir -p -m 0777 /root/centos/7
 cd /root/centos/7
-curl -O "https://raw.githubusercontent.com/vladimirmashkov/openconnect/dev/auto/etc/vladimir_key.pub"
-curl -O "https://raw.githubusercontent.com/vladimirmashkov/openconnect/dev/auto/00.prepare_os_check_ssh.sh"
-chmod 0777 00.prepare_os_check_ssh.sh
-./00.prepare_os_check_ssh.sh
-
+curl -O "https://raw.githubusercontent.com/vladimirmashkov/linux_forwarding/dev/centos7/centos/7/prepare.sh"
+chmod 0777 prepare.sh
+./prepare.sh
+echo
 ```
