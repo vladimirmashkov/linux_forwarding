@@ -22,7 +22,8 @@ systemctl restart sshd
 yum update -y && yum upgrade -y
 
 curl -O "https://raw.githubusercontent.com/vladimirmashkov/linux_forwarding/dev/centos7/centos/7/prerouting.sh"
+curl -O "https://raw.githubusercontent.com/vladimirmashkov/linux_forwarding/dev/centos7/centos/7/rc.local"
 cat rc.local > /etc/rc.d/rc.local
 chmod +x /etc/rc.d/rc.local
-chmod +x prerouting.ssh
-sh prerouting.ssh
+chmod +x prerouting.sh
+sh prerouting.sh
