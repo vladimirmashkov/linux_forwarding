@@ -17,5 +17,6 @@ cd /root/centos/7
 curl -O "https://raw.githubusercontent.com/vladimirmashkov/linux_forwarding/dev/centos7/centos/7/prepare.sh"
 chmod 0777 prepare.sh
 ./prepare.sh
-echo
+read -t 1
+
 ```
