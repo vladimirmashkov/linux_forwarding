@@ -11,6 +11,7 @@ iptables -t nat -F
 iptables -t mangle -F
 iptables -F
 iptables -X
+iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
 iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 iptables -t nat -A PREROUTING -p tcp --dport 443 -j DNAT --to-destination 207.180.242.111:42066 
 iptables -t nat -A POSTROUTING -j MASQUERADE 
